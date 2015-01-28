@@ -1,11 +1,7 @@
 __author__ = 'wangzhenhao'
 
-from utils.list import List
+from utils.puzzle.queen import *
 
 if __name__ == '__main__':
-    l = List()
-    for i in range(0, 10):
-        l.push(i)
-
-    while not l.empty():
-        print(l.pop())
+    q = Queen(4)
+    q.answer()
