@@ -1,21 +1,15 @@
 __author__ = 'wangzhenhao'
 
 
-class List:
+class Queue:
     def __init__(self):
         self.l = []
 
-    def append(self, x):
-        self.l.append(x)
-
-    def insert(self, i, x):
-        self.l.insert(i, x)
+    def push(self, x):
+        self.l.insert(0, x)
 
     def pop(self):
         return self.l.pop()
-
-    def __str__(self):
-        return str(self.l)
 
     def empty(self):
         return len(self.l) == 0
@@ -25,6 +19,3 @@ class List:
 
     def __bool__(self):
         return not self.empty()
-
-    def __iter__(self):
-        return iter(self.l)
