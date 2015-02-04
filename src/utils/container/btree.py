@@ -26,7 +26,7 @@ class BTree:
                 self._insert(node.right, ele)
         else:
             if None == node.left:
-                node.left == BTreeNode(ele)
+                node.left = BTreeNode(ele)
             else:
                 self._insert(node.left, ele)
 
