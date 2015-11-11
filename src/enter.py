@@ -1,9 +1,10 @@
 #!/usr/bin/env python
 
+from random import randint
+from utils.container import *
+
 __author__ = 'wangzhenhao'
 
-from utils.container import *
-from random import randint
 
 if __name__ == '__main__':
     t = btree.BTree()

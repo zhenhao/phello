@@ -13,19 +13,19 @@ class BTree:
         self.root = None
 
     def insert(self, ele):
-        if None == self.root:
+        if self.root is None:
             self.root = BTreeNode(ele)
         else:
             self._insert(self.root, ele)
 
     def _insert(self, node, ele):
         if ele >= node.ele:
-            if None == node.right:
+            if node.right is None:
                 node.right = BTreeNode(ele)
             else:
                 self._insert(node.right, ele)
         else:
-            if None == node.left:
+            if node.left is None:
                 node.left = BTreeNode(ele)
             else:
                 self._insert(node.left, ele)
@@ -34,13 +34,10 @@ class BTree:
         self._show(self.root)
 
     def _show(self, node):
-        if None == node:
+        if node is None:
             return
-        if None != node.left:
+        if node.left is not None:
             self._show(node.left)
         print(node.ele)
-        if None != node.right:
+        if node.right is not None:
             self._show(node.right)
-
-
-
